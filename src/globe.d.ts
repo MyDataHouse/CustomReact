@@ -1,4 +1,8 @@
 interface CElement {
-  type: string
-  props: Record<string, string>
+  type: 'TEXT_NODE' | string
+  props: {
+    [key: string]: any
+    nodeValue?: string
+  }
+  children?: CElement[]
 }
